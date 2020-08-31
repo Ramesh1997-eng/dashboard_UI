@@ -1,0 +1,13 @@
+nz-progress {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+p {
+    margin: 0;
+}
+
+.text-align-center {
+    text-align: center;
+}

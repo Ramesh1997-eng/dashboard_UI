@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row d-flex justify-content-between prtd">
+        <div class="col-md-3">
+            <h2>
+                Portfolio
+            </h2>
+        </div>
+        <div class="col-md-9 d-flex justify-content-end">
+            <button nz-button [nzType]="'default'" class="save_btn" style="background-color: blue;">
+                <P style="color:white;">Refer a Friend</P>
+                <i nz-icon nzType="user-add" nzTheme="outline"></i>
+            </button>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-space-between">
+        <div class="col-md-8">
+            <nz-card>
+                <div class="row">
+                    <div class="col-md-7">
+                        <app-chart></app-chart>
+                    </div>
+                    <div class="col-md-5" style="margin-top: 5vh;">
+                        <app-progress></app-progress>
+                    </div>
+                </div>
+            </nz-card>
+        </div>
+        <div class="col-md-4">
+            <app-card></app-card>
+        </div>
+    </div>
+    <div class="row">
+        <span *ngFor="
+               let item of data;
+             ">
+            <button nz-button nzType="default" class="btn-style btn-active-bg width-100 marginbtm-10">
+                <div>{{ item.data }}</div>
+                <div><b>{{item.amount}}</b></div>
+            </button>
+        </span>
+    </div>
+</div>

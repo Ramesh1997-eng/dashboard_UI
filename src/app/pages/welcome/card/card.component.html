@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div style="display: block;">
+                <nz-card [nzSize]='small'>
+                    <div><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsjlgF4Y12O4cj2tmApm50nwD_DfT9WWQIDA&usqp=CAU"
+                            class="card-img-top" alt="..."></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a style=" color: blue;">Membership:</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a style=" color: blue;">Prime Plus</a>
+                        </div>
+                    </div>
+                    <div class="row" *ngFor="let item of mockData">
+                        <div class="col-md-6"> <a style=" color: blue;">{{item.data}}</a></div>
+                        <div class="col-md-6">
+                            <p style="color: black;">{{item.amount}}</p>
+                        </div>
+                    </div>
+                </nz-card>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null">
+    <div class="sidebar-logo">
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="home" nzOpen nzSelected>
+      </li>
+      <li nz-submenu nzOpen nzTitle="E-Wallet" nzIcon="wallet"></li>
+      <li nz-submenu nzOpen nzTitle="Affiliates" nzIcon="dashboard"></li>
+      <li nz-submenu nzOpen nzTitle="Events" nzIcon="calendar"></li>
+      <li nz-submenu nzOpen nzTitle="Payments" nzIcon="money-collect"></li>
+
+      <li nz-submenu nzOpen nzTitle="Manage My Business" nzIcon="appstore"></li>
+      <li nz-submenu nzOpen nzTitle="Settings" nzIcon="setting">
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="row header">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6">
+              <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+                <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+              </span>
+            </div>
+            <div class="col-md-6">
+              <h2>
+                <i nz-icon nzType="appstore" nzTheme="outline"></i>Dashboard</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 align-items-right">
+          <i nz-icon nzType="bell" nzTheme="twotone" style="height: 64px;"></i>
+
+          <Span style="margin-left: 78px;">Subash Manual
+            <a nz-dropdown [nzDropdownMenu]="menu">
+              <i nz-icon nzType="down"></i>
+            </a>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul nz-menu nzSelectable>
+                <li nz-menu-item>
+                </li>
+              </ul>
+            </nz-dropdown-menu>
+          </Span>
+        </div>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
